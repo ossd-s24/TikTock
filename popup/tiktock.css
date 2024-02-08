@@ -1,0 +1,9 @@
+html, body {
+    width: 100px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* finish the css for everything in the html */
