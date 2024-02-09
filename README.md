@@ -18,7 +18,10 @@ This is a timer that sets the work session automatically to 25 minutes and lets 
 7. Your extension should be in Firefox and you can try it out! 
 
 ## Contributors 
-Please read the contribution guidelines before opneing a pull request or contributing to the repository.
+Please read the contribution guidelines before opening a pull request or contributing to the repository.
+
+## Code of Conduct
+Please read the Code of Conduct before contributing! 
 
 ## License
 The project is made avaialbe under the [MIT](LICENSE). See the `LICENSE` file for more information. 

@@ -3,16 +3,22 @@
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="tiktock.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="popup-content">
+            <a href="https://www.flaticon.com/free-icons/plant" title="plant icons"><img src="../icons/plant.png" alt="Plant Icon from Free-pik" width="60" height="60"></a>
+            <h2>Stay Focused</h2>
             <button id="startBtn">Start</button>
             <button id="endBtn">End</button>
-            <h2>Stay Focused</h2>
+            <!-- Random button will randomly choose your how long your work time is (anywhere from 15 minutes to 1 hour) -->
+            <button id="randomBtn">Random</button>
             <h1 id="timer_string">00:00</h1>
-            <div class="circle_container">
-                <div class="circle fade-in fade-out"></div>
-            </div>
         </div>
         <div id="error-content" class="hidden">
             <p>Unfortunately, the extension is not working.</p>
