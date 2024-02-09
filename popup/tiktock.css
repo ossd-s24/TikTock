@@ -1,0 +1,50 @@
+html, body {
+    width: 200px;
+    text-align: center;
+}
+
+body {
+    border: 2px black solid;
+    font-family: "Happy Monkey", system-ui;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    border-radius: 50px;
+    width: 75%;
+    margin: 4% auto; 
+    padding: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-family: "Happy Monkey", system-ui;
+    background-color: #c4dac2;
+    border: 2px solid black;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: "Gamja Flower";
+    font-size: 35px;
+}
+
+#popup-content {
+    background-color: #f7ebdb;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+button:hover {
+    background-color: #9ba59c;
+}
+
+img:hover {
+    width: 80px;
+    height: 80px;
+}
