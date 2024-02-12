@@ -1,26 +1,36 @@
-const timer_types = {
-	break: "break",
-	study: "study"
-};
-
-
 let startBtn = document.getElementById("startBtn");
 let pauseBtn = document.getElementById("pauseBtn");
 let resetBtn = document.getElementById("resetBtn");
 
+browser.runtime.sendMessage({action: "pop-up init"});
+
 startBtn.onclick = function () {
-	showPauseBtn()
-    browser.runtime.sendMessage({ action: "start" });
+	browser.runtime.sendMessage({ action: "start" });
 };
 
 resetBtn.onclick = function () {
-    browser.runtime.sendMessage({ action: "reset" });
+	browser.runtime.sendMessage({ action: "reset" });
 };
 
 pauseBtn.onclick = function () {
-	showStartBtn();
-    browser.runtime.sendMessage({ action: "pause" });
+	browser.runtime.sendMessage({ action: "pause" });
 };
+
+browser.runtime.onMessage.addListener((message) => {
+	if (message.timeInSeconds != undefined) {
+		updateTimeString(message.timeInSeconds);
+	}
+	if (message.isPaused != undefined) {
+		if (message.isPaused) {
+			showStartBtn();
+		} else {
+			showPauseBtn();
+		}
+	}
+	if (message.isBreak != undefined) {
+		// TODO: Change the title if it's a break
+	}
+});
 
 function showPauseBtn() {
 	startBtn.style.display = 'none';	
@@ -36,7 +46,5 @@ function updateTimeString(valueInSeconds) {
 	let min = Math.floor(valueInSeconds/60);
 	let sec = valueInSeconds % 60;
 	let str = min + ":" + sec;
-	console.log("Min:" + min);
-	console.log("Sec:" + sec);
 	document.getElementById("timer_string").innerHTML = str;
 }
