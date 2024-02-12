@@ -11,7 +11,7 @@ This is a timer that sets the work session automatically to 25 minutes and lets 
 - There is a random button where it will randomly choose how long you work for. It can be anywhere from 15 minutes to an hour!
 
 ## Get Started
-1. Download or clone the Repository
+1. Download or clone the Repository!
 2. Extract the extension Files if the repository was downloaded
 3. Open Firefox and type "about:debugging" in the address bar and then press Enter. 
 4. Click on the "This Firefox" tab on the left sidebar. 
