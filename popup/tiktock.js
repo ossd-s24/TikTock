@@ -1,6 +1,5 @@
 let time_string = ""; // This will eventually write to the html element in the pop-up
 
-// TODO: Make these get values from a slider, or some other form of input
 let STUDY_TIME_SECONDS = 60 * 25; // 25 minutes of study time in seconds
 let BREAK_TIME_SECONDS = 60 * 5; // 5 minutes of break time in seconds
 
@@ -13,9 +12,14 @@ const timer_types = {
 };
 let current_timer_type = timer_types.study;
 
+document.getElementById("startBtn").onclick = function () {
+	console.log("pressed start button");
+};
+
 // Code to be executed each second
 // TODO: should call this when pressed a 'start timer' button
 setInterval(() => {
+
 	if (current_timer_type === timer_types.study) {
 		study_time_left--;
 	} else if (current_timer_type === timer_types.break) {
