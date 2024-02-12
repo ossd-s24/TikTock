@@ -1,52 +1,42 @@
-let time_string = ""; // This will eventually write to the html element in the pop-up
-
-let STUDY_TIME_SECONDS = 60 * 25; // 25 minutes of study time in seconds
-let BREAK_TIME_SECONDS = 60 * 5; // 5 minutes of break time in seconds
-
-let break_time_left = BREAK_TIME_SECONDS;
-let study_time_left = STUDY_TIME_SECONDS;
-
 const timer_types = {
 	break: "break",
 	study: "study"
 };
-let current_timer_type = timer_types.study;
 
-document.getElementById("startBtn").onclick = function () {
-	console.log("pressed start button");
+
+let startBtn = document.getElementById("startBtn");
+let pauseBtn = document.getElementById("pauseBtn");
+let resetBtn = document.getElementById("resetBtn");
+
+startBtn.onclick = function () {
+	showPauseBtn()
+    browser.runtime.sendMessage({ action: "start" });
 };
 
-// Code to be executed each second
-// TODO: should call this when pressed a 'start timer' button
-setInterval(() => {
+resetBtn.onclick = function () {
+    browser.runtime.sendMessage({ action: "reset" });
+};
 
-	if (current_timer_type === timer_types.study) {
-		study_time_left--;
-	} else if (current_timer_type === timer_types.break) {
-		break_time_left--;
-	}
+pauseBtn.onclick = function () {
+	showStartBtn();
+    browser.runtime.sendMessage({ action: "pause" });
+};
 
-	if (study_time_left <= 0 || study_time_left <= 0) {
-		resetTimers();
-		switchTimers();
-	}
-
-	updateTimeString();
-}, 1000);
-
-function resetTimers() {
-	break_time_left = BREAK_TIME_SECONDS;
-	study_time_left = STUDY_TIME_SECONDS;
+function showPauseBtn() {
+	startBtn.style.display = 'none';	
+	pauseBtn.style.display = 'initial';
 }
 
-function switchTimers() {
-	if (current_timer_type === timer_types.break) {
-		current_timer_type = timer_types.study;
-	} else if (current_timer_type === timer_types.break) {
-		current_timer_type = timer_types.break;
-	}
+function showStartBtn() {
+	pauseBtn.style.display = 'none';
+	startBtn.style.display = 'initial';
 }
 
-function updateTimeString() {
-	// TODO: Update the string to be displayed based on current break or study time left
+function updateTimeString(valueInSeconds) {
+	let min = Math.floor(valueInSeconds/60);
+	let sec = valueInSeconds % 60;
+	let str = min + ":" + sec;
+	console.log("Min:" + min);
+	console.log("Sec:" + sec);
+	document.getElementById("timer_string").innerHTML = str;
 }
