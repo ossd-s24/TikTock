@@ -9,11 +9,16 @@
     "64": "icons/icons-64.png"
   },
 
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "storage"],
 
   "browser_action": {
     "default_icon": "icons/icons-32.png",
     "default_popup": "popup/tiktock.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
   }
 }
 
