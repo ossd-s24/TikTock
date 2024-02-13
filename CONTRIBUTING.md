@@ -9,10 +9,11 @@ To contribute to TikTock, please follow these steps:
 1. Fork the repository to your GitHub account.
 2. Clone the forked repository to your local machine.
 3. Create a new branch for your changes.
+4. Make a pull request once you are satisfied with the changes
 
 ## Code Style and Guidelines
 
-Please make sure to follow the code style and guidelines when contributing to TikTock. This will ensure consistency and maintainability of the codebase.
+Please make sure to follow the code style and guidelines when contributing to TikTock, we are currently using [this guideline](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript). This will ensure consistency and maintainability of the codebase.
 
 ## Submitting Changes
 
