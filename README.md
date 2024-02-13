@@ -15,6 +15,9 @@ This is a timer that sets the work session automatically to 25 minutes and lets 
 - Search for a fun little easter egg! 
 
 ## Get Started
+To download the extension directly to Firefox, visit here: https://addons.mozilla.org/en-US/firefox/addon/tiktock/
+
+To build from source, follow these steps:
 1. Download or clone the Repository
 2. Extract the extension Files if the repository was downloaded
 3. Open Firefox and type "about:debugging" in the address bar and then press Enter. 
