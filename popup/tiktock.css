@@ -30,6 +30,10 @@ h2 {
     font-size: 35px;
 }
 
+p {
+    font-family: "Gamja Flower", Arial, Helvetica, sans-serif;
+}
+
 #popup-content {
     background-color: #f7ebdb;
     padding-top: 1em;

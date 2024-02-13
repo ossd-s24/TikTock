@@ -75,6 +75,7 @@ function showStartBtn() {
 function updateTimeString(valueInSeconds) {
 	let min = Math.floor(valueInSeconds/60);
 	let sec = valueInSeconds % 60;
-	let str = min + ":" + sec;
+	let formatSec = sec.toString().padStart(2, '0');
+	let str = min + ":" + formatSec;
 	document.getElementById("timer_string").innerHTML = str;
 }
