@@ -13,12 +13,23 @@
     <body>
         <div id="popup-content">
             <a href="https://www.flaticon.com/free-icons/plant" title="plant icons"><img src="../icons/plant.png" alt="Plant Icon from Free-pik" width="60" height="60"></a>
-            <h2>Stay Focused</h2>
+            <h2 id="messageHeader">Stay Focused</h2>
+            <!--
+            TODO: Implement sliders to study and break duration
+            <label for="study-time">Study Duration:</label>
+            <input type="number" id="study-time" min="1" step="1" value="25">
+            <label for="study-time">Break Duration:</label>
+            <input type="number" id="break-time" min="1" step="1" value="5">
+            -->
             <button id="startBtn">Start</button>
-            <button id="endBtn">End</button>
-            <!-- Random button will randomly choose your how long your work time is (anywhere from 15 minutes to 1 hour) -->
-            <button id="randomBtn">Random</button>
-            <h1 id="timer_string">00:00</h1>
+            <button id="pauseBtn">Pause</button>
+            <button id="switchBtn">Switch</button>
+            <button id="resetBtn">Reset</button>
+            <!-- 
+                TODO: Implement random button. Random button will randomly choose your how long your work time is (anywhere from 15 minutes to 1 hour)
+                <button id="randomBtn">Random</button>
+            -->
+            <h1 id="timer_string">--:--</h1>
         </div>
         <div id="error-content" class="hidden">
             <p>Unfortunately, the extension is not working.</p>
