@@ -8,7 +8,11 @@ This is a timer that sets the work session automatically to 25 minutes and lets 
 
 - You will hear a noise each time the working timer and/or the break timer begins.
 
-- There is a random button where it will randomly choose how long you work for. It can be anywhere from 15 minutes to an hour!
+- You will have the ability to switch between work and break timers. 
+
+- Did you by accident pressed the start button to work, but you haven't actually started to work? No worries! You can reset the timer with the reset button. 
+
+- Search for a fun little easter egg! 
 
 ## Get Started
 1. Download or clone the Repository
