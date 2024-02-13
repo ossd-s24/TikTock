@@ -63,7 +63,6 @@ browser.runtime.onMessage.addListener((message) => {
 
 function showPauseBtn() {
 	startBtn.style.display = 'none';	
-	startBtn.style.display = 'none';	
 	pauseBtn.style.display = 'initial';
 }
 
