@@ -13,7 +13,12 @@
 
   "browser_action": {
     "default_icon": "icons/icons-32.png",
-    "default_popup": "popup/tiktock.html"
+    "default_popup": "popup/tiktock.html",
+    "theme_icons": [{
+        "light": "icons/icons-32-white.png",
+        "dark": "icons/icons-32.png",
+        "size": 32
+      }]
   },
 
   "background": {
