@@ -3,6 +3,7 @@ html, body {
     text-align: center;
 }
 
+
 body {
     border: 2px black solid;
     font-family: "Happy Monkey", system-ui;
@@ -28,6 +29,8 @@ h2 {
     text-transform: uppercase;
     font-family: "Gamja Flower";
     font-size: 35px;
+    height: 80px;
+    padding: 5px;
 }
 
 p {
