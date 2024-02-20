@@ -55,8 +55,10 @@ browser.runtime.onMessage.addListener((message) => {
 	if (message.isBreak != undefined) {
 		if (message.isBreak) {
 			messageHeader.innerHTML = "Enjoy Your Break";
+			switchBtn.innerHTML = "Focus";
 		} else {
 			messageHeader.innerHTML = "Stay Focused";
+			switchBtn.innerHTML = "Break";
 		}
 	}
 });
