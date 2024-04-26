@@ -75,6 +75,8 @@ function switchTimers() {
     return browser.storage.session.get("isBreak").then(result => {
         const isBreak = result.isBreak;
         setBreak(!isBreak);
+        resetTimers();
+        setPaused(false);
     });
 }
 
